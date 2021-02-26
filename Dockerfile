@@ -1,3 +1,5 @@
 FROM rust
 
-CMD ["cargo run --bin reward-claim-generator"]
+COPY . .
+
+RUN cargo run --bin reward-claim-generator
