@@ -12,12 +12,18 @@ The output is directly displayed in `stdout`.
 
 ## Example Output
 
-*Shortened*
+*NOTE*: This tool does not differentiate between established and newly joined candidates. False positives are expected.
 
 ```bash
 [2021-02-26T16:08:09Z INFO  reward_claim_generator] Parsing config
 [2021-02-26T16:08:09Z INFO  reward_claim_generator] Starting Polkadot candidate report
 [2021-02-26T16:08:13Z INFO  lib] Generating report table
+[2021-02-26T16:08:13Z WARN  lib] Validator 129LBt5T1eYtnGHbPYeiiMdmWfokCiiq7z6JBfjnYifiombz (name "Pioneer") lags behind in claiming rewards (last claim in Era 179)
+[2021-02-26T16:08:13Z WARN  lib] Validator 12CJw9KNkC7FzVVg3dvny4PWHjjkvdyM17mmNfXyfucp8JfM (name "Dionysus-sv-validator-0") lags behind in claiming rewards (last claim in Era 165)
+[2021-02-26T16:08:13Z WARN  lib] Validator 15cfSaBcTxNr8rV59cbhdMNCRagFr3GE6B3zZRsCp4QHHKPu (name "KODAY") lags behind in claiming rewards (last claim in Era 53)
+[2021-02-26T16:08:13Z WARN  lib] Validator 15UyiZ9rYhrX39Rasc1iE4sdME7WHNFSj8RQT3yuuytd3Nrd (name "KIRA Staking") lags behind in claiming rewards (last claim in Era 38)
+[2021-02-26T16:08:13Z WARN  lib] Validator 13uwV8CBHjv25W3GACLPzzvTu2v9USc2yCQdhrqPhyM3vx6w (name "Simply Staking") lags behind in claiming rewards (last claim in Era N/A)
+[2021-02-26T16:08:13Z WARN  lib] Validator 1sEcDfGZsbJCSinFBPN2hkqYU8QwLxipDjuz3BN7UFPJnrk (name "stakezone") lags behind in claiming rewards (last claim in Era N/A)
 +--------------------------------------------------+----------------------------------+--------------------+----------------------+
 | Stash                                            | Name                             | Last claimed (Era) | Nominated by targets |
 +--------------------------------------------------+----------------------------------+--------------------+----------------------+
@@ -66,6 +72,14 @@ The output is directly displayed in `stdout`.
 | 12dvyqCFhVubTDqMdojyjhkxVUMaYVXWLv8uZW1NomUunPmN | Nodeasy                          | 258                | YES                  |
 | 15BZW721S3fzMYT8vY3Dt2sVXNTECqwHQ1bNUM8q4fi7EVcc | ilgio                            | 254                | YES                  |
 | 15ML93PH72j5fFfqLrXRy7uDh7pUBCTUcSVYbaDV18LaTfeW | Allnodes                         | 252                | no                   |
+| 1StVBqjDJKogQTsLioHC44iFch1cEAv2jcpsnvsy5buBtUE  | 🐰【 CRYPTIDS/FRANK 】🐰         | 245                | no                   |
+| 14tcxHSTAiZf7M4vcLfFdGkGJFjfx6zDqds5QVyz2H24hKgG | Mile                             | 245                | no                   |
+| 129LBt5T1eYtnGHbPYeiiMdmWfokCiiq7z6JBfjnYifiombz | Pioneer                          | 179                | YES                  |
+| 12CJw9KNkC7FzVVg3dvny4PWHjjkvdyM17mmNfXyfucp8JfM | Dionysus-sv-validator-0          | 165                | no                   |
+| 15cfSaBcTxNr8rV59cbhdMNCRagFr3GE6B3zZRsCp4QHHKPu | KODAY                            | 53                 | YES                  |
+| 15UyiZ9rYhrX39Rasc1iE4sdME7WHNFSj8RQT3yuuytd3Nrd | KIRA Staking                     | 38                 | no                   |
+| 13uwV8CBHjv25W3GACLPzzvTu2v9USc2yCQdhrqPhyM3vx6w | Simply Staking                   | N/A                | no                   |
+| 1sEcDfGZsbJCSinFBPN2hkqYU8QwLxipDjuz3BN7UFPJnrk  | stakezone                        | N/A                | no                   |
 +--------------------------------------------------+----------------------------------+--------------------+----------------------+
 
 ...
