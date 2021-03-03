@@ -1,4 +1,4 @@
 {{/* Returns the app name */}}
-{{- define "1k-reward-claim-generator.name" -}}
+{{- define "1k-watcher-claimed-payouts.name" -}}
 {{ .Release.Name }}
 {{- end }}

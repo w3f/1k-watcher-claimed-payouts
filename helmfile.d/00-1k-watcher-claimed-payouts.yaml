@@ -9,16 +9,16 @@ repositories:
 
 releases:
 {{- if or (eq .Environment.Name "ci") (eq .Environment.Name "local") }} 
-- name: otv-reward-claim-generator
-  chart: ../charts/1k-reward-claim-generator
+- name: otv-watcher-claimed-payouts
+  chart: ../charts/1k-watcher-claimed-payouts
   values:
-  - ./config/1k-reward-claim-generator.yaml.gotmpl
+  - ./config/1k-watcher-claimed-payouts.yaml.gotmpl
 {{- end }}
 
 {{- if eq .Environment.Name "production" }}  
-- name: otv-reward-claim-generator
+- name: otv-watcher-claimed-payouts
   namespace: kusama 
-  chart: w3f/1k-reward-claim-generator
+  chart: w3f/1k-watcher-claimed-payouts
   values:
-  - ./config/1k-reward-claim-generator.yaml.gotmpl
+  - ./config/1k-watcher-claimed-payouts.yaml.gotmpl
 {{- end }}

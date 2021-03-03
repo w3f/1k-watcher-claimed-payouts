@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/w3f/1k-reward-claim-generator.svg?style=svg)](https://circleci.com/gh/w3f/1k-reward-claim-generator)
+[![CircleCI](https://circleci.com/gh/w3f/1k-watcher-claimed-payouts.svg?style=svg)](https://circleci.com/gh/w3f/1k-watcher-claimed-payouts)
 
 # About
 

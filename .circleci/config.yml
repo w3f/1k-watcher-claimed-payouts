@@ -12,7 +12,7 @@ jobs:
           docker_layer_caching: true
       - run:
           command: |
-            /scripts/build-image.sh web3f/1k-reward-claim-generator .
+            /scripts/build-image.sh web3f/1k-watcher-claimed-payouts .
 
   publishImage:
     docker:
@@ -22,7 +22,7 @@ jobs:
       - setup_remote_docker
       - run:
           command: |
-            /scripts/publish-image.sh web3f/1k-reward-claim-generator
+            /scripts/publish-image.sh web3f/1k-watcher-claimed-payouts
 
   publishChart:
     docker:

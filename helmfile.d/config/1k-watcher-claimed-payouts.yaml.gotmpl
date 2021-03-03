@@ -5,7 +5,7 @@ image:
   tag: {{ env "CIRCLE_SHA1" | default "kind" }}
 {{ else if eq .Environment.Name "local" }}
 image:
-  repo: localhost:5000/1k-reward-claim-generator
+  repo: localhost:5000/1k-watcher-claimed-payouts
   tag: latest
 {{ end }}
 
