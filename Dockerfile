@@ -16,7 +16,7 @@ RUN echo "fn main() {println!(\"if you see this, the build broke\")}" > src/main
 
 RUN cargo build --release 
 
-RUN rm -f target/release/deps/*reward*
+RUN rm -f target/release/deps/*watcher*
 RUN rm -f target/release/deps/*staking*
 RUN rm -rf src
 
@@ -35,7 +35,7 @@ RUN update-ca-certificates --fresh
 
 WORKDIR /app
 
-COPY --from=builder /app/target/release/reward-claim-generator /usr/local/bin
+COPY --from=builder /app/target/release/watcher-claimed-payouts /usr/local/bin
 COPY config/config.yml ./config/config.yml
 
-CMD ["/usr/local/bin/reward-claim-generator"]
+CMD ["/usr/local/bin/watcher-claimed-payouts"]
