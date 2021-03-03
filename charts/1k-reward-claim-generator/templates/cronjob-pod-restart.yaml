@@ -18,7 +18,7 @@ spec:
           - name: {{ include "1k-reward-claim-generator.name" . }}
             image: {{ .Values.image.repo }}:{{ .Values.image.tag }}
             imagePullPolicy: IfNotPresent
-            env:
+            {{- if and ( ne .Values.environment "ci" ) ( ne .Values.environment "local" ) }}  
             resources:
 {{ toYaml .Values.resources | indent 16 }}
             {{- end }}
