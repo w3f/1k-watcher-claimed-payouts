@@ -7,7 +7,7 @@ source /scripts/bootstrap-helm.sh
 run_tests() {
     echo Running tests...
 
-    wait_pod_ready registrar-challenger
+    wait_pod_ready reward
 }
 
 teardown() {
