@@ -11,7 +11,7 @@ name = "lib"
 path = "src/lib.rs"
 
 [[bin]]
-name = "reward-claim-generator"
+name = "watcher-claimed-payouts"
 path = "src/main.rs"
 
 [dependencies]

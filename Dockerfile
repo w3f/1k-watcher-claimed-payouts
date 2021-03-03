@@ -2,4 +2,4 @@ FROM rust
 
 COPY . .
 
-RUN cargo run --bin reward-claim-generator --release
+RUN cargo run --bin watcher-claimed-payouts --release
