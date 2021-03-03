@@ -1,0 +1,25 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "1k-watcher-claimed-payouts.name" . }}
+  labels:
+    app: {{ include "1k-watcher-claimed-payouts.name" . }}
+spec:
+  schedule: {{ .Values.schedule | quote }}
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: {{ include "1k-watcher-claimed-payouts.name" . }}
+        spec:
+          containers:
+          - name: {{ include "1k-watcher-claimed-payouts.name" . }}
+            image: {{ .Values.image.repo }}:{{ .Values.image.tag }}
+            imagePullPolicy: IfNotPresent
+            {{- if and ( ne .Values.environment "ci" ) ( ne .Values.environment "local" ) }}  
+            resources:
+{{ toYaml .Values.resources | indent 16 }}
+            {{- end }}
+          restartPolicy: Never

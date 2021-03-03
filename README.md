@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/w3f/1k-watcher-claimed-payouts.svg?style=svg)](https://circleci.com/gh/w3f/1k-watcher-claimed-payouts)
+
 # About
 
 A tool for generating reports about reward claims of all the 1k Validator Programme candidates (Polkadot and Kusama). Used internally for a notification service by the W3F.

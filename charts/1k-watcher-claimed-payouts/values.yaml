@@ -1,0 +1,15 @@
+environment: production
+
+image:
+  repo: web3f/1k-watcher-claimed-payouts
+  tag: v0.1.0
+
+resources: 
+  requests:
+    cpu: "50m"
+    memory: "100Mi"
+  limits:
+    cpu: "150m"
+    memory: "500Mi" 
+
+schedule: "* * * * *"    
