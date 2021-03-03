@@ -7,11 +7,11 @@ source /scripts/bootstrap-helm.sh
 run_tests() {
     echo Running tests...
 
-    wait_pod_ready reward
+    wait_pod_ready otv-reward-claim-generator
 }
 
 teardown() {
-    helm delete registrar-challenger
+    helm delete otv-reward-claim-generator
 }
 
 main(){
