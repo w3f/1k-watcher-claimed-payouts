@@ -5,7 +5,7 @@ A tool for generating reports about reward claims of all the 1k Validator Progra
 ## Execution
 
 ```rust
-cargo run --bin reward-claim-generator
+cargo run --bin watcher-claimed-payouts
 ```
 
 The output is directly displayed in `stdout`.
