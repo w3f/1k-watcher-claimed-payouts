@@ -9,7 +9,7 @@ WORKDIR /app
 COPY Cargo.lock Cargo.lock
 COPY Cargo.toml Cargo.toml
 
-RUN apt install pkg-config libssl-dev
+RUN apt update && apt install pkg-config libssl-dev
 
 RUN mkdir src/
 RUN mkdir src/bin
