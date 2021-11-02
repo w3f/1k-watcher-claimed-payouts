@@ -2,12 +2,14 @@
 # Cargo Build Stage
 # ------------------------------------------------------------------------------
 
-FROM rust:1.46.0 AS builder
+FROM rust:slim-buster AS builder
 
 WORKDIR /app
 
 COPY Cargo.lock Cargo.lock
 COPY Cargo.toml Cargo.toml
+
+RUN apt update && apt install -y pkg-config libssl-dev
 
 RUN mkdir src/
 RUN mkdir src/bin
