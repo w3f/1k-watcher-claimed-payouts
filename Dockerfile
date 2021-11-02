@@ -9,6 +9,8 @@ WORKDIR /app
 COPY Cargo.lock Cargo.lock
 COPY Cargo.toml Cargo.toml
 
+RUN apt install pkg-config
+
 RUN mkdir src/
 RUN mkdir src/bin
 RUN touch src/lib.rs
