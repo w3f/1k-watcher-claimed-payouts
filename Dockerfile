@@ -2,7 +2,7 @@
 # Cargo Build Stage
 # ------------------------------------------------------------------------------
 
-FROM rust:1.46.0 AS builder
+FROM rust:slim-buster AS builder
 
 WORKDIR /app
 
